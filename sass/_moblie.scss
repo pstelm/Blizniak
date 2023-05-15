@@ -1,0 +1,17 @@
+@media (max-width: 576px) {
+	.hero__shadow {
+		padding: 0 2em;
+		align-items: center;
+		text-align: center;
+	}
+
+	.hero__title {
+		width: 100%;
+		font-size: 8rem;
+	}
+
+	.hero__subtitle {
+		width: 100%;
+		padding: 1em 0;
+	}
+}
