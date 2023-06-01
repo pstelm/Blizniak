@@ -207,11 +207,93 @@ body {
 // ---------- FOOTER ----------
 
 .footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background-color: $blue-logo;
 	color: $white-transparent;
+	font-size: 1.4rem;
+
+	&__box {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 100px 100px 50px;
+		grid-template-areas:
+			'map adress nav'
+			'map contacts nav'
+			'map socials logo';
+		column-gap: 4em;
+		padding: 4em 0;
+	}
+
+	&__map {
+		grid-area: map;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__adress {
+		grid-area: adress;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	&__contacts {
+		grid-area: contacts;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	&__socials {
+		position: relative;
+	}
+
+	&__logo {
+		position: relative;
+		height: 100%;
+	}
+
+	&__logo-img {
+		position: absolute;
+		bottom: 0;
+		height: 50%;
+	}
+
+	&__nav {
+		grid-area: nav;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		a {
+			color: $light-bg-transparent;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $white-transparent;
+	}
+
+	&__link:hover {
+		color: $medium-bg;
+	}
+
+	i {
+		width: 1em;
+		margin-right: 1em;
+	}
+
+	p:nth-child(2) {
+		margin-left: 2em;
+	}
 
 	&__bottom-txt {
-		padding: 1em 0;
+		width: 100%;
+		padding: 1em 0em;
 		background-color: $blue-dark;
 		text-align: center;
 	}
@@ -270,6 +352,10 @@ body {
 }
 
 @media (max-width: 1400px) {
+	.section {
+		padding: 4em 0;
+	}
+
 	.nav-wrapper {
 		padding: 0 2em;
 	}
@@ -337,6 +423,19 @@ body {
 		font-size: 1.5rem;
 		font-weight: normal;
 	}
+
+	.footer__box {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100px 100px 50px;
+		grid-template-areas:
+			'adress nav'
+			'contacts nav'
+			'socials logo';
+	}
+
+	.footer__map {
+		display: none;
+	}
 }
 
 @media (max-width: 768px) {
@@ -368,5 +467,23 @@ body {
 	.hero__subtitle {
 		width: 100%;
 		padding: 1em 0;
+	}
+
+	.footer__box {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	.footer__nav {
+		flex-direction: column;
+		width: 100%;
+		height: 75px;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
+
+	.footer__logo {
+		display: none;
 	}
 }
