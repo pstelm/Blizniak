@@ -76,7 +76,52 @@
 			</section>
 
 			<section id="contact" class="contact section">
-				<div class="wrapper"><h2 class="section-title">Kontakt</h2></div>
+				<div class="wrapper">
+					<h2 class="section-title">Kontakt</h2>
+					<div class="contact__box">
+						<form class="contact__form" action="">
+							<input
+								class="contact__form-input"
+								type="text"
+								name="name"
+								placeholder="Imię i nazwisko"
+							/>
+							<input
+								class="contact__form-input"
+								type="text"
+								name="company"
+								placeholder="Nazwa firmy"
+							/>
+
+							<input
+								class="contact__form-input"
+								type="email"
+								name="email"
+								placeholder="Adres e-mail"
+								required
+							/>
+							<input
+								class="contact__form-input"
+								type="tel"
+								name="phone"
+								placeholder="Nr telefonu"
+							/>
+
+							<textarea
+								class="contact__form-input contact__form-textarea"
+								name="message"
+								id="message"
+								cols="30"
+								rows="10"
+								placeholder="Wiadomość"
+							></textarea>
+							<button class="contact__form-btn">Wyślij</button>
+						</form>
+						<!-- <div class="contact__img">
+							<img src="./img/yacht/y4.jpg" alt="Szklane drzwi w łazience jachtu ACE" />
+						</div> -->
+					</div>
+				</div>
 			</section>
 		</main>
 
@@ -100,17 +145,22 @@
 					</div>
 					<div class="footer__contacts">
 						<p><i class="fa-solid fa-phone"></i>+48 58 773 23 13</p>
-						<p></i>+48 501 741 819</p>
-						<p><i class="fa-solid fa-envelope"></i><a href="mailto:marcin@blizniak.com" class="footer__link">marcin@blizniak.com</a></p>
+						<p>+48 501 741 819</p>
+						<p>
+							<i class="fa-solid fa-envelope"></i
+							><a href="mailto:marcin@blizniak.com" class="footer__link">marcin@blizniak.com</a>
+						</p>
 					</div>
 					<div class="socials">
-						<p><i class="fa-brands fa-facebook-f"></i><a
-							href="http://https://www.facebook.com/profile.php?id=100068883725891"
-							target="_blank"
-							class="footer__link"
-							>Facebook</a
-						></p>
-						
+						<p>
+							<i class="fa-brands fa-facebook-f"></i
+							><a
+								href="http://https://www.facebook.com/profile.php?id=100068883725891"
+								target="_blank"
+								class="footer__link"
+								>Facebook</a
+							>
+						</p>
 					</div>
 					<nav class="footer__nav">
 						<ul id="footer-navigation" class="footer__nav">
@@ -127,7 +177,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer__bottom-txt">&copy; <span class="footer__year"></span> | Bliźniak-Szkło</div>
+			<div class="footer__bottom-txt">
+				&copy; <span class="footer__year"></span> | Bliźniak-Szkło
+			</div>
 		</footer>
 	</body>
 </html>
