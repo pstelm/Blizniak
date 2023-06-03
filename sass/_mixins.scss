@@ -30,7 +30,7 @@
 	position: relative;
 	padding: 0.8em 2em;
 	border: 1px solid $blue-logo;
-	border-radius: 3px;
+	border-radius: 5px;
 	color: $white;
 	background-color: $blue-logo;
 	font-family: 'Roboto', sans-serif;
@@ -56,13 +56,13 @@
 		top: 0px;
 		left: -100%;
 		width: 50%;
-		height: 200%;
+		height: 100%;
 		background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
 		transform: rotate(-45deg);
-		transition: left 1.5s;
+		transition: left 1s;
 	}
 
 	&:hover::before {
-		left: 150%;
+		left: 100%;
 	}
 }

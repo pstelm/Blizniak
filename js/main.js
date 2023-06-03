@@ -1,8 +1,13 @@
-const footerYear = document.querySelector('.footer__year');
 const menuBtn = document.querySelector('.hamburger');
 const menuNavMobile = document.querySelector('.nav__mobile');
 const menuMobileList = document.querySelector('.nav__menu-mobile');
 const menuMobileLinksArr = document.querySelectorAll('.nav__link-mobile');
+
+const form = document.forms.contactFrom;
+const { name, company, email, phone } = document.forms.contactFrom;
+const formBtn = document.getElementById('form-btn');
+
+const footerYear = document.querySelector('.footer__year');
 
 function setCurrentYear() {
 	footerYear.append(new Date().getFullYear());
@@ -26,6 +31,12 @@ function navLinkHandler() {
 		});
 	});
 }
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+	console.log(name.value + email.value);
+	form.reset();
+});
 
 setCurrentYear();
 menuBtn.addEventListener('click', toogleMenu);

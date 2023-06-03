@@ -218,7 +218,7 @@ body {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1em;
-		width: 80%;
+		width: 100%;
 	}
 
 	&__form-input {
@@ -241,6 +241,8 @@ body {
 	}
 
 	&__form-btn {
+		margin-top: 1em;
+		width: 50%;
 		font-size: 1.6rem;
 		@include mixins.btnStyle;
 		@include mixins.btnHoverAnimation;
