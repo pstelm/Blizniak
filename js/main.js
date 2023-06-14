@@ -3,8 +3,8 @@ const menuNavMobile = document.querySelector('.nav__mobile');
 const menuMobileList = document.querySelector('.nav__menu-mobile');
 const menuMobileLinksArr = document.querySelectorAll('.nav__link-mobile');
 
-const form = document.forms.contactFrom;
-const { name, company, email, phone } = document.forms.contactFrom;
+const contactForm = document.forms.contactFrom;
+const { contactName, company, email, phone } = document.forms.contactFrom;
 const formBtn = document.getElementById('form-btn');
 
 const footerYear = document.querySelector('.footer__year');
@@ -32,9 +32,20 @@ function navLinkHandler() {
 	});
 }
 
-form.addEventListener('submit', (event) => {
+contactForm.addEventListener('submit', (event) => {
 	event.preventDefault();
-	console.log(name.value + email.value);
+
+	// Email.send({
+	// 	Host: 'smtp.elasticemail.com',
+	// 	Username: 'plnstlmch@gmail.com',
+	// 	Password: 'password',
+	// 	To: 'plnstlmch@gmail.com',
+	// 	From: email.value,
+	// 	Subject: 'Nowa wiadomość ze strony blizniak-szklo.com',
+	// 	Body: 'And this is the body',
+	// }).then((message) => alert(message));
+
+	console.log(contactName.value + email.value);
 	form.reset();
 });
 

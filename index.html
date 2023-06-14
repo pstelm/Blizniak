@@ -4,11 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./css/hamburger.css" />
@@ -72,14 +72,43 @@
 			</section>
 
 			<section id="about" class="about section">
-				<div class="wrapper"><h2 class="section-title">O nas</h2></div>
+				<div class="wrapper">
+					<h2 class="section-title">O nas</h2>
+
+					<div class="about__info">
+						<p>
+							Firma Bliźniak powstała w 2010 r. Zaczynaliśmy jako firma montująca konstrukcje
+							szklano-aluminiowe. Wychodząc naprzeciw zapotrzebowaniom rynku na produkty szklarskie
+							nabyliśmy wiedzę, umiejętności i nowoczesny park maszynowy co pozwoliło nam stworzyć
+							profesjonalny zakład specjalizujący się w przetwórstwie i kompleksowej obróbce szkła i
+							luster.
+						</p>
+						<p>
+							Nasza oferta skierowana jest zarówno do klientów indywidualnych jak i biznesowych.
+							Specjalizujemy się w tworzeniu nietypowych realizacji szklarskich. Posiadamy własny
+							transport oraz profesjonalną kadrę wykonującą pomiary i montaże.
+						</p>
+						<p>
+							Dzięki doświadczeniu, stosowaniu innowacyjnych technologii oraz pracy na nowoczesnych
+							maszynach oferujemy usługi szklarskie na najwyższym poziomie.
+						</p>
+					</div>
+					<div class="about__container">
+						<div class="about__img"><img src="./img/" alt="" /></div>
+						<div class="about__stats">
+							<div class="about__stat-box"><span>13 lat</span>na rynku</div>
+							<div class="about__stat-box"><span>nowoczesny</span>park maszynowy</div>
+							<div class="about__stat-box"><span>1000+</span>realizacji</div>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<section id="contact" class="contact section">
 				<div class="wrapper">
 					<h2 class="section-title">Kontakt</h2>
 					<div class="contact__box">
-						<form class="contact__form" name="contactFrom" action="">
+						<form class="contact__form" name="contactFrom">
 							<input
 								class="contact__form-input"
 								type="text"
@@ -115,7 +144,7 @@
 								rows="10"
 								placeholder="Wiadomość"
 							></textarea>
-							<button id="form-btn" class="contact__form-btn">Wyślij</button>
+							<button id="form-btn" class="contact__form-btn" type="submit">Wyślij</button>
 						</form>
 						<!-- <div class="contact__img">
 							<img src="./img/yacht/y4.jpg" alt="Szklane drzwi w łazience jachtu ACE" />
@@ -181,5 +210,7 @@
 				&copy; <span class="footer__year"></span> | Bliźniak-Szkło
 			</div>
 		</footer>
+
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</body>
 </html>
