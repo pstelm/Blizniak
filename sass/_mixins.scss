@@ -68,3 +68,10 @@
 		left: 100%;
 	}
 }
+
+@mixin circle {
+	position: absolute;
+	background-color: $light-bg-transparent;
+	border-radius: 50%;
+	z-index: 0;
+}
