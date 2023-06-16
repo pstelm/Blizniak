@@ -35,7 +35,7 @@ p {
 }
 
 .section {
-	padding: 5em 0;
+	padding: 5em 0 6em;
 }
 
 .section-title {
@@ -92,7 +92,6 @@ p {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	// padding: 1vmin 4vmin;
 	width: 100%;
 	height: 90px;
 	padding: 2rem 0;
@@ -144,8 +143,8 @@ p {
 		padding: 1em 0;
 		color: $white;
 		font-size: 2rem;
-		// font-size: 1.8rem;
-		// text-transform: uppercase;
+		font-size: 1.8rem;
+		text-transform: uppercase;
 		@include mixins.linkStyle;
 		@include mixins.linkHover;
 	}
@@ -256,13 +255,14 @@ p {
 }
 
 .about__img-big {
-	width: 35%;
+	width: 40%;
 	height: 100%;
 	padding-right: 2em;
 	margin-right: 3em;
 	background-image: url('../img/yacht/y8.jpg');
 	background-size: cover;
 	background-position: center;
+	filter: saturate(0.8);
 }
 
 .about__stats {
@@ -283,18 +283,132 @@ p {
 	font-size: 4rem;
 }
 
-.about-circle {
-	top: 25%;
-	left: 50%;
-	width: 700px;
-	height: 700px;
-	@include mixins.circle;
-}
-
 // ---------- OFFER ---------
 
 .offer {
 	height: 100vh;
+}
+
+.offer__container {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 200px);
+	grid-template-areas:
+		'steps steps walls services'
+		'mirrors bath panels services'
+		'stairs diff diff furniture';
+	gap: 1em;
+	width: 100%;
+	background-size: cover;
+	font-size: 2rem;
+}
+
+.offer__container h3 {
+	margin-bottom: 0.5em;
+	font-size: 2.2rem;
+	font-weight: normal;
+	z-index: 5;
+	// filter: drop-shadow(0 0 0.25rem $white);
+}
+
+.offer__box {
+	position: relative;
+	padding: 2em;
+	background-color: $white;
+	border-radius: 3px;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.offer__box-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $white-transparent;
+	z-index: -1;
+}
+
+.offer__steps {
+	grid-area: steps;
+	background-color: $blue-logo;
+	color: $white;
+}
+
+.offer__steps .fa-angle-right {
+	margin-left: 1em;
+}
+
+.offer__walls {
+	grid-area: walls;
+}
+
+.offer__walls-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	// width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.offer__mirrors {
+	grid-area: mirrors;
+	background-image: url('../img/stock/mirror1.jpg');
+	background-size: cover;
+}
+
+.offer__bath {
+	grid-area: bath;
+}
+
+.offer__stairs {
+	grid-area: stairs;
+	background-image: url('../img/interior/stairs.jpeg');
+	background-size: cover;
+}
+
+.offer__furniture {
+	grid-area: furniture;
+}
+
+.offer__diff {
+	grid-area: diff;
+	background-color: $blue-logo-transparent;
+	// background-color: $blue-dark;
+	color: $white;
+}
+
+.offer__diff p:nth-child(2) {
+	text-transform: uppercase;
+}
+
+.offer__diff a {
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 1em;
+	color: $white;
+}
+
+.offer__diff a:hover {
+	color: $clr-accent;
+}
+
+.offer__services {
+	grid-area: services;
+	background-color: $blue-logo;
+	color: $white;
+}
+
+.offer__services-list {
+	list-style: inside none;
+	line-height: 1.5;
+}
+
+.fa-angle-right {
+	margin-right: 1em;
 }
 
 // ---------- CONTACT ---------
@@ -424,7 +538,7 @@ p {
 	}
 
 	&__link:hover {
-		color: $medium-bg;
+		color: $clr-accent;
 	}
 
 	i {
@@ -540,7 +654,7 @@ p {
 
 @media (max-width: 992px) {
 	.section {
-		padding: 3em 0;
+		padding: 3em 0 4em;
 	}
 
 	.arrow-up {
