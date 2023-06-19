@@ -1121,6 +1121,9 @@ p {
     margin: 0;
     border: none;
   }
+  .machines__text .fa-minus {
+    margin-right: 0.6em;
+  }
   .machines__img {
     display: none;
   }
