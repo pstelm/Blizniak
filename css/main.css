@@ -630,6 +630,50 @@ p {
   background-color: #f5f5f5;
 }
 
+.ourwork__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.ourwork__box {
+  width: 22%;
+  height: 400px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.ourwork__img {
+  width: 100%;
+  height: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top 10px;
+     object-position: top 10px;
+}
+
+.ourwork__info {
+  padding: 1em;
+}
+
+.ourwork__title {
+  margin-bottom: 0.5em;
+  font-size: 2.2rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.ourwork__link {
+  display: block;
+  margin-top: 1em;
+  color: #0f1419;
+}
+
 .contact__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -836,6 +880,9 @@ p {
   .offer__box h3 {
     font-size: 2rem;
   }
+  .ourwork__link {
+    margin-top: 0.5em;
+  }
 }
 @media (max-width: 1400px) {
   .section {
@@ -913,6 +960,10 @@ p {
     display: block;
     height: 200px;
   }
+  .ourwork__box {
+    width: 28%;
+    margin-bottom: 3em;
+  }
   .contact__form {
     width: 100%;
   }
@@ -966,6 +1017,13 @@ p {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 200px);
     grid-template-areas: "steps steps mirrors" "panels bath services" "stairs walls services" "furniture diff diff ";
+  }
+  .ourwork__box {
+    width: 45%;
+    margin-bottom: 3em;
+  }
+  .ourwork__info {
+    padding: 2em;
   }
   .contact__form-input {
     width: 100%;
@@ -1060,6 +1118,9 @@ p {
   .machines__img {
     display: none;
   }
+  .ourwork__info {
+    padding: 1.5em;
+  }
   .contact__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1137,6 +1198,9 @@ p {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .ourwork__box {
+    width: 100%;
   }
   .contact__form-btn {
     width: 100%;
