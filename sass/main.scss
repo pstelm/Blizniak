@@ -2,6 +2,12 @@
 @use './mixins';
 @use './animations';
 
+:root {
+	font-size: 62.5%;
+	$fz-p-normal: 1.6rem;
+	$fz-p-small: 1.4rem;
+}
+
 *,
 *::before,
 *::after {
@@ -11,7 +17,6 @@
 }
 
 html {
-	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
 
@@ -40,7 +45,7 @@ p {
 
 .section-title {
 	position: relative;
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;
 	color: $blue-logo;
 	text-transform: uppercase;
 	font-size: 4rem;
@@ -52,7 +57,7 @@ p {
 	position: absolute;
 	bottom: -10px;
 	left: 0;
-	width: 20%;
+	width: 25%;
 	height: 3px;
 	background-color: $blue-logo;
 }
@@ -245,13 +250,14 @@ p {
 }
 
 .about__img-small {
+	position: relative;
 	width: 15%;
 	height: 100%;
 	margin-right: 2em;
 	background-image: url('../img/stock/about4.jpg');
 	background-size: cover;
 	background-position: right;
-	filter: saturate(0.3);
+	filter: saturate(0.8);
 }
 
 .about__img-big {
@@ -263,6 +269,15 @@ p {
 	background-size: cover;
 	background-position: center;
 	filter: saturate(0.8);
+}
+
+.about__img-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $blue-light-transparent;
 }
 
 .about__stats {
@@ -293,15 +308,13 @@ p {
 	position: relative;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, 200px);
+	grid-template-rows: repeat(3, 220px);
 	grid-template-areas:
-		'steps steps walls services'
-		'mirrors bath panels services'
+		'steps steps mirrors  services'
+		' panels bath walls services'
 		'stairs diff diff furniture';
-	gap: 1em;
+	gap: 0.5em;
 	width: 100%;
-	background-size: cover;
-	font-size: 2rem;
 }
 
 .offer__container h3 {
@@ -309,12 +322,14 @@ p {
 	font-size: 2.2rem;
 	font-weight: normal;
 	z-index: 5;
-	// filter: drop-shadow(0 0 0.25rem $white);
 }
 
 .offer__box {
 	position: relative;
-	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1.5em 2em;
 	background-color: $white;
 	border-radius: 3px;
 	overflow: hidden;
@@ -331,14 +346,30 @@ p {
 	z-index: -1;
 }
 
-.offer__steps {
-	grid-area: steps;
-	background-color: $blue-logo;
+.offer__box a {
+	text-decoration: none;
+	display: inline-block;
 	color: $white;
+	transition: color 0.2s;
 }
 
-.offer__steps .fa-angle-right {
+.offer__box a:hover {
+	color: $clr-accent;
+}
+
+.offer__steps {
+	grid-area: steps;
+	background-color: $blue-dark;
+	color: $white-transparent;
+}
+
+.offer__steps .fa-minus {
 	margin-left: 1em;
+	font-size: 1.6rem;
+}
+
+.offer__steps-title-mobile {
+	display: none;
 }
 
 .offer__walls {
@@ -349,7 +380,6 @@ p {
 	position: absolute;
 	top: 0;
 	left: 0;
-	// width: 100%;
 	height: 100%;
 	z-index: -1;
 }
@@ -362,6 +392,12 @@ p {
 
 .offer__bath {
 	grid-area: bath;
+	background-image: url('../img/yacht/y5.jpg');
+	background-size: cover;
+}
+
+.offer__bath h3 {
+	filter: drop-shadow(0 0 0.5rem $white);
 }
 
 .offer__stairs {
@@ -376,30 +412,15 @@ p {
 
 .offer__diff {
 	grid-area: diff;
-	background-color: $blue-logo-transparent;
-	// background-color: $blue-dark;
-	color: $white;
-}
-
-.offer__diff p:nth-child(2) {
-	text-transform: uppercase;
-}
-
-.offer__diff a {
-	text-decoration: none;
-	display: inline-block;
-	margin-top: 1em;
-	color: $white;
-}
-
-.offer__diff a:hover {
-	color: $clr-accent;
+	// background-color: $blue-logo-transparent;
+	background-color: $blue-dark-transparent;
+	color: $white-transparent;
 }
 
 .offer__services {
 	grid-area: services;
-	background-color: $blue-logo;
-	color: $white;
+	background-color: $blue-dark;
+	color: $white-transparent;
 }
 
 .offer__services-list {
@@ -407,8 +428,16 @@ p {
 	line-height: 1.5;
 }
 
-.fa-angle-right {
+.fa-angle-right,
+.fa-minus {
 	margin-right: 1em;
+}
+
+// ---------- CONTACT ---------
+
+.machines {
+	height: 100vh;
+	background-color: $white;
 }
 
 // ---------- CONTACT ---------
@@ -587,11 +616,21 @@ p {
 	.hero__title {
 		font-size: 12rem;
 	}
+
+	.offer__box {
+		padding: 1.5em;
+	}
+
+	.offer__box h3 {
+		font-size: 2rem;
+	}
 }
+
+// MEDIA 1400px
 
 @media (max-width: 1400px) {
 	.section {
-		padding: 4em 0;
+		padding: 4em 0 5em;
 	}
 
 	.nav-wrapper {
@@ -616,6 +655,8 @@ p {
 		letter-spacing: 1em;
 	}
 }
+
+// MEDIA 1200px
 
 @media (max-width: 1200px) {
 	.wrapper {
@@ -647,14 +688,46 @@ p {
 		margin-right: 2em;
 	}
 
+	.offer {
+		height: auto;
+	}
+
+	.offer__container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 220px);
+		grid-template-areas:
+			'steps steps mirrors'
+			'panels bath services'
+			'stairs walls services'
+			'furniture diff diff ';
+	}
+
+	.offer__container h3 {
+		font-size: 2rem;
+	}
+
+	.offer__box .fa-minus,
+	.offer__box .fa-angle-right {
+		margin-right: 0.8em;
+	}
+
+	.offer__steps .fa-minus {
+		margin-left: 0.8em;
+	}
+
 	.contact__form {
 		width: 100%;
 	}
 }
 
+// MEDIA 992px
+
 @media (max-width: 992px) {
-	.section {
-		padding: 3em 0 4em;
+	// .section {
+	// 	padding: 4em 0;
+	// }
+	body {
+		font-size: 1.4rem;
 	}
 
 	.arrow-up {
@@ -707,6 +780,16 @@ p {
 		line-height: 1.5;
 	}
 
+	.offer__container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 200px);
+		grid-template-areas:
+			'steps steps mirrors'
+			'panels bath services'
+			'stairs walls services'
+			'furniture diff diff ';
+	}
+
 	.contact__form-input {
 		width: 100%;
 	}
@@ -725,6 +808,8 @@ p {
 		display: none;
 	}
 }
+
+// MEDIA 768px
 
 @media (max-width: 768px) {
 	.hero__shadow {
@@ -767,11 +852,35 @@ p {
 		border: none;
 	}
 
+	.offer__container {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(6, 200px);
+		grid-template-areas:
+			'steps steps'
+			'mirrors bath'
+			'panels services'
+			'walls services'
+			'stairs furniture'
+			'diff diff';
+	}
+
+	.offer__box h3 {
+		font-size: 1.8rem;
+	}
+
+	.offer__steps .fa-minus {
+		margin-left: 0.6em;
+		margin-right: 0.6em;
+		font-size: 1.4rem;
+	}
+
 	.contact__form {
 		display: flex;
 		flex-direction: column;
 	}
 }
+
+// MEDIA 576px
 
 @media (max-width: 576px) {
 	.wrapper {
@@ -786,10 +895,11 @@ p {
 		padding: 0 2em;
 		align-items: center;
 		text-align: center;
+		text-wrap: balance;
 	}
 
 	.hero__title {
-		width: 80%;
+		width: 90%;
 		font-size: 6rem;
 	}
 
@@ -810,6 +920,50 @@ p {
 
 	.about__stat-text:nth-child(2) {
 		order: 3;
+	}
+
+	.offer__container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 300px repeat(3, 200px) 300px repeat(3, 200px) 300px;
+		grid-template-areas:
+			'steps'
+			'mirrors'
+			'bath'
+			'panels'
+			'services'
+			'walls'
+			'stairs'
+			'furniture'
+			'diff';
+	}
+
+	.offer__steps-title-desktop {
+		display: none;
+	}
+
+	.offer__steps-title-mobile {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.offer__steps-title-mobile span {
+		display: block;
+		width: 50%;
+		margin-bottom: 0.5em;
+	}
+
+	.offer__steps-title-mobile i {
+		margin-right: 0.5em;
+		font-size: 1.2rem;
+	}
+
+	.offer__walls-video {
+		// top: -20px;
+		// left: -20px;
+		// height: auto;
+		width: 100%;
+		object-fit: cover;
 	}
 
 	.contact__form-btn {

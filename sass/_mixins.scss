@@ -37,10 +37,11 @@
 	font-family: 'Roboto', sans-serif;
 	overflow: hidden;
 	cursor: pointer;
-	transition: color 0.3s linear;
+	transition: background-color 0.3s linear;
 
 	&:hover {
-		color: $white-transparent;
+		// color: $white-transparent;
+		background-color: $blue-dark;
 	}
 
 	// &:hover {

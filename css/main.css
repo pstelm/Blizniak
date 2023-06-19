@@ -60,6 +60,10 @@
     bottom: 20px;
   }
 }
+:root {
+  font-size: 62.5%;
+}
+
 *,
 *::before,
 *::after {
@@ -70,7 +74,6 @@
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -98,7 +101,7 @@ p {
 
 .section-title {
   position: relative;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   color: #232562;
   text-transform: uppercase;
   font-size: 4rem;
@@ -110,7 +113,7 @@ p {
   position: absolute;
   bottom: -10px;
   left: 0;
-  width: 20%;
+  width: 25%;
   height: 3px;
   background-color: #232562;
 }
@@ -345,14 +348,15 @@ p {
 }
 
 .about__img-small {
+  position: relative;
   width: 15%;
   height: 100%;
   margin-right: 2em;
   background-image: url("../img/stock/about4.jpg");
   background-size: cover;
   background-position: right;
-  -webkit-filter: saturate(0.3);
-          filter: saturate(0.3);
+  -webkit-filter: saturate(0.8);
+          filter: saturate(0.8);
 }
 
 .about__img-big {
@@ -365,6 +369,15 @@ p {
   background-position: center;
   -webkit-filter: saturate(0.8);
           filter: saturate(0.8);
+}
+
+.about__img-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(234, 27%, 24%, 0.25);
 }
 
 .about__stats {
@@ -399,12 +412,10 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  grid-template-areas: "steps steps walls services" "mirrors bath panels services" "stairs diff diff furniture";
-  gap: 1em;
+  grid-template-rows: repeat(3, 220px);
+  grid-template-areas: "steps steps mirrors  services" " panels bath walls services" "stairs diff diff furniture";
+  gap: 0.5em;
   width: 100%;
-  background-size: cover;
-  font-size: 2rem;
 }
 
 .offer__container h3 {
@@ -416,7 +427,17 @@ p {
 
 .offer__box {
   position: relative;
-  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em 2em;
   background-color: hsl(0, 0%, 100%);
   border-radius: 3px;
   overflow: hidden;
@@ -433,14 +454,31 @@ p {
   z-index: -1;
 }
 
-.offer__steps {
-  grid-area: steps;
-  background-color: #232562;
+.offer__box a {
+  text-decoration: none;
+  display: inline-block;
   color: hsl(0, 0%, 100%);
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
-.offer__steps .fa-angle-right {
+.offer__box a:hover {
+  color: #dec34a;
+}
+
+.offer__steps {
+  grid-area: steps;
+  background-color: #191d3e;
+  color: hsla(0, 0%, 100%, 0.65);
+}
+
+.offer__steps .fa-minus {
   margin-left: 1em;
+  font-size: 1.6rem;
+}
+
+.offer__steps-title-mobile {
+  display: none;
 }
 
 .offer__walls {
@@ -463,6 +501,13 @@ p {
 
 .offer__bath {
   grid-area: bath;
+  background-image: url("../img/yacht/y5.jpg");
+  background-size: cover;
+}
+
+.offer__bath h3 {
+  -webkit-filter: drop-shadow(0 0 0.5rem hsl(0, 0%, 100%));
+          filter: drop-shadow(0 0 0.5rem hsl(0, 0%, 100%));
 }
 
 .offer__stairs {
@@ -477,29 +522,14 @@ p {
 
 .offer__diff {
   grid-area: diff;
-  background-color: hsla(238, 47%, 26%, 0.75);
-  color: hsl(0, 0%, 100%);
-}
-
-.offer__diff p:nth-child(2) {
-  text-transform: uppercase;
-}
-
-.offer__diff a {
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1em;
-  color: hsl(0, 0%, 100%);
-}
-
-.offer__diff a:hover {
-  color: #dec34a;
+  background-color: hsla(234, 27%, 24%, 0.65);
+  color: hsla(0, 0%, 100%, 0.65);
 }
 
 .offer__services {
   grid-area: services;
-  background-color: #232562;
-  color: hsl(0, 0%, 100%);
+  background-color: #191d3e;
+  color: hsla(0, 0%, 100%, 0.65);
 }
 
 .offer__services-list {
@@ -507,8 +537,14 @@ p {
   line-height: 1.5;
 }
 
-.fa-angle-right {
+.fa-angle-right,
+.fa-minus {
   margin-right: 1em;
+}
+
+.machines {
+  height: 100vh;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .contact__box {
@@ -567,11 +603,11 @@ p {
   font-family: "Roboto", sans-serif;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition: color 0.3s linear;
-  transition: color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 .contact__form-btn:hover {
-  color: hsla(0, 0%, 100%, 0.65);
+  background-color: #191d3e;
 }
 .contact__form-btn::before {
   content: "";
@@ -714,10 +750,16 @@ p {
   .hero__title {
     font-size: 12rem;
   }
+  .offer__box {
+    padding: 1.5em;
+  }
+  .offer__box h3 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 1400px) {
   .section {
-    padding: 4em 0;
+    padding: 4em 0 5em;
   }
   .nav-wrapper {
     padding: 0 2em;
@@ -766,13 +808,31 @@ p {
   .about__img-big {
     margin-right: 2em;
   }
+  .offer {
+    height: auto;
+  }
+  .offer__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 220px);
+    grid-template-areas: "steps steps mirrors" "panels bath services" "stairs walls services" "furniture diff diff ";
+  }
+  .offer__container h3 {
+    font-size: 2rem;
+  }
+  .offer__box .fa-minus,
+  .offer__box .fa-angle-right {
+    margin-right: 0.8em;
+  }
+  .offer__steps .fa-minus {
+    margin-left: 0.8em;
+  }
   .contact__form {
     width: 100%;
   }
 }
 @media (max-width: 992px) {
-  .section {
-    padding: 3em 0 4em;
+  body {
+    font-size: 1.4rem;
   }
   .arrow-up {
     font-size: 3rem;
@@ -814,6 +874,11 @@ p {
     display: block;
     font-size: 3rem;
     line-height: 1.5;
+  }
+  .offer__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    grid-template-areas: "steps steps mirrors" "panels bath services" "stairs walls services" "furniture diff diff ";
   }
   .contact__form-input {
     width: 100%;
@@ -871,6 +936,19 @@ p {
     padding: 0;
     border: none;
   }
+  .offer__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 200px);
+    grid-template-areas: "steps steps" "mirrors bath" "panels services" "walls services" "stairs furniture" "diff diff";
+  }
+  .offer__box h3 {
+    font-size: 1.8rem;
+  }
+  .offer__steps .fa-minus {
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    font-size: 1.4rem;
+  }
   .contact__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -894,9 +972,10 @@ p {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    text-wrap: balance;
   }
   .hero__title {
-    width: 80%;
+    width: 90%;
     font-size: 6rem;
   }
   .hero__subtitle {
@@ -917,6 +996,36 @@ p {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+  }
+  .offer__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px repeat(3, 200px) 300px repeat(3, 200px) 300px;
+    grid-template-areas: "steps" "mirrors" "bath" "panels" "services" "walls" "stairs" "furniture" "diff";
+  }
+  .offer__steps-title-desktop {
+    display: none;
+  }
+  .offer__steps-title-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .offer__steps-title-mobile span {
+    display: block;
+    width: 50%;
+    margin-bottom: 0.5em;
+  }
+  .offer__steps-title-mobile i {
+    margin-right: 0.5em;
+    font-size: 1.2rem;
+  }
+  .offer__walls-video {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .contact__form-btn {
     width: 100%;
