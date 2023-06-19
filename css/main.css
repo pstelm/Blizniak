@@ -256,12 +256,18 @@ p {
   color: hsl(0, 0%, 100%);
   font-size: 3rem;
   font-weight: normal;
+  text-transform: uppercase;
   position: relative;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+}
+
+.nav__link-mobile:hover,
+.nav__link-mobile:focus {
+  color: #dec34a;
 }
 
 .is-visible {
@@ -1132,6 +1138,9 @@ p {
   }
 }
 @media (max-width: 576px) {
+  body {
+    text-wrap: balance;
+  }
   .wrapper {
     padding: 0 2em;
   }

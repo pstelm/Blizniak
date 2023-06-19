@@ -162,9 +162,14 @@ p {
 	margin: 0;
 	color: $white;
 	font-size: 3rem;
-
 	font-weight: normal;
+	text-transform: uppercase;
 	@include mixins.linkStyle;
+}
+
+.nav__link-mobile:hover,
+.nav__link-mobile:focus {
+	color: $clr-accent;
 }
 
 .is-visible {
@@ -1045,6 +1050,10 @@ p {
 // MEDIA 576px
 
 @media (max-width: 576px) {
+	body {
+		text-wrap: balance;
+	}
+
 	.wrapper {
 		padding: 0 2em;
 	}
