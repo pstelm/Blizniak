@@ -71,6 +71,7 @@ p {
 	line-height: 1;
 	background-color: $blue-dark-transparent;
 	border-radius: 5px;
+	z-index: 5;
 }
 
 .arrow-up a {
@@ -84,7 +85,7 @@ p {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	z-index: 5;
+	z-index: 10;
 }
 
 .nav-wrapper {
@@ -184,6 +185,7 @@ p {
 	background-repeat: no-repeat;
 	text-transform: uppercase;
 	text-align: center;
+	z-index: 7;
 
 	&__shadow {
 		display: flex;
@@ -300,9 +302,9 @@ p {
 
 // ---------- OFFER ---------
 
-.offer {
-	height: 100vh;
-}
+// .offer {
+// 	height: 100vh;
+// }
 
 .offer__container {
 	position: relative;
@@ -314,6 +316,7 @@ p {
 		' panels bath walls services'
 		'stairs diff diff furniture';
 	gap: 0.5em;
+	gap: 1em;
 	width: 100%;
 }
 
@@ -331,7 +334,7 @@ p {
 	justify-content: space-between;
 	padding: 1.5em 2em;
 	background-color: $white;
-	border-radius: 3px;
+	// border-radius: 3px;
 	overflow: hidden;
 	z-index: 0;
 }
@@ -433,10 +436,76 @@ p {
 	margin-right: 1em;
 }
 
-// ---------- CONTACT ---------
+// ---------- MACHINES PARK ---------
 
 .machines {
-	height: 100vh;
+	width: 100%;
+	background-color: $white;
+}
+
+.machines__container {
+	display: flex;
+	align-items: start;
+	width: 100%;
+}
+
+.machines__assets {
+	width: 50%;
+}
+
+.machines__video {
+	width: 100%;
+}
+
+.machines__img {
+	position: relative;
+	display: none;
+	width: 100%;
+	height: 300px;
+	background-image: url('../img/shops/shop3.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 1em;
+}
+
+.machines__img-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $blue-light-transparent;
+}
+
+.machines__text-box {
+	width: 50%;
+	padding-right: 2em;
+	// text-wrap: balance;
+}
+
+.machines__text {
+	padding-bottom: 2em;
+}
+
+.machines__text:nth-child(2) {
+	padding-top: 2em;
+	margin-bottom: 2em;
+	border-top: 2px solid $blue-dark;
+	border-bottom: 2px solid $blue-dark;
+}
+
+.machines__list {
+	list-style: inside none;
+	line-height: 1.5;
+}
+
+.machines__link {
+	color: $dark;
+}
+
+// ---------- OUR WORK ---------
+
+.ourwork {
 	background-color: $white;
 }
 
@@ -459,7 +528,7 @@ p {
 	&__form-input {
 		padding: 1em;
 		border: 1px solid $white;
-		border-radius: 5px;
+		// border-radius: 5px;
 		font-size: 1.6rem;
 	}
 
@@ -482,14 +551,6 @@ p {
 		@include mixins.btnStyle;
 		@include mixins.btnHoverAnimation;
 	}
-
-	// &__img {
-	// 	width: 45%;
-
-	// 	img {
-	// 		width: 100%;
-	// 	}
-	// }
 }
 
 // ---------- FOOTER ----------
@@ -606,7 +667,6 @@ p {
 @media (max-width: 1600px) {
 	.wrapper {
 		max-width: 1200px;
-		padding: 0 2em;
 	}
 
 	.nav-wrapper {
@@ -631,6 +691,10 @@ p {
 @media (max-width: 1400px) {
 	.section {
 		padding: 4em 0 5em;
+	}
+
+	.wrapper {
+		padding: 0 2em;
 	}
 
 	.nav-wrapper {
@@ -713,6 +777,11 @@ p {
 
 	.offer__steps .fa-minus {
 		margin-left: 0.8em;
+	}
+
+	.machines__img {
+		display: block;
+		height: 200px;
 	}
 
 	.contact__form {
@@ -872,6 +941,32 @@ p {
 		margin-left: 0.6em;
 		margin-right: 0.6em;
 		font-size: 1.4rem;
+	}
+
+	.machines__container {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.machines__assets {
+		width: 100%;
+		padding: 2em 0;
+		border-top: 2px solid $blue-dark;
+		border-bottom: 2px solid $blue-dark;
+	}
+
+	.machines__text-box {
+		width: 100%;
+	}
+
+	.machines__text:nth-child(2) {
+		padding-top: 0;
+		margin: 0;
+		border: none;
+	}
+
+	.machines__img {
+		display: none;
 	}
 
 	.contact__form {
