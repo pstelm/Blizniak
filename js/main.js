@@ -9,6 +9,8 @@ const formBtn = document.getElementById('form-btn');
 
 const footerYear = document.querySelector('.footer__year');
 
+const servicesFooterYear = document.querySelector('.footer__year');
+
 function setCurrentYear() {
 	footerYear.append(new Date().getFullYear());
 }

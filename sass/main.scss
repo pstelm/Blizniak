@@ -4,8 +4,8 @@
 
 :root {
 	font-size: 62.5%;
-	$fz-p-normal: 1.6rem;
-	$fz-p-small: 1.4rem;
+	--fz-p-normal: 1.6rem;
+	--fz-p-small: 1.4rem;
 }
 
 *,
@@ -101,68 +101,70 @@ p {
 	width: 100%;
 	height: 90px;
 	padding: 2rem 0;
+}
 
-	&__logo {
-		height: 100%;
-		z-index: 5;
-		border-radius: 3px;
-		overflow: hidden;
-	}
+.navbar__logo {
+	height: 100%;
+	z-index: 5;
+	border-radius: 3px;
+	overflow: hidden;
+}
 
-	&__logo-img {
-		height: 100%;
-	}
+.navbar__logo-img {
+	height: 100%;
 }
 
 .nav {
-	&__mobile {
-		position: absolute;
-		top: -100vh;
-		right: 0;
-		display: none;
-		justify-content: center;
-		width: 100%;
-		height: 100vh;
-		background-color: $blue-dark;
-		opacity: 0;
-		transition: top 0.3s ease-in, opacity 0.3s linear;
-	}
+	// NAVIGATION
+}
 
-	&__menu {
-		display: flex;
-		list-style: none;
-	}
+.nav__mobile {
+	position: absolute;
+	top: -100vh;
+	right: 0;
+	display: none;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: $blue-dark;
+	opacity: 0;
+	transition: top 0.3s ease-in, opacity 0.3s linear;
+}
 
-	&__menu-desktop {
-		align-items: center;
-		height: 100%;
-	}
+.nav__menu {
+	display: flex;
+	list-style: none;
+}
 
-	&__menu-mobile {
-		flex-direction: column;
-		justify-content: center;
-		gap: 2em;
-	}
+.nav__menu-desktop {
+	align-items: center;
+	height: 100%;
+}
 
-	&__link {
-		margin-left: 3em;
-		padding: 1em 0;
-		color: $white;
-		font-size: 2rem;
-		font-size: 1.8rem;
-		text-transform: uppercase;
-		@include mixins.linkStyle;
-		@include mixins.linkHover;
-	}
+.nav__menu-mobile {
+	flex-direction: column;
+	justify-content: center;
+	gap: 2em;
+}
 
-	&__link-mobile {
-		margin: 0;
-		color: $white;
-		font-size: 3rem;
+.nav__link {
+	margin-left: 3em;
+	padding: 1em 0;
+	color: $white;
+	font-size: 2rem;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	@include mixins.linkStyle;
+	@include mixins.linkHover;
+}
 
-		font-weight: normal;
-		@include mixins.linkStyle;
-	}
+.nav__link-mobile {
+	margin: 0;
+	color: $white;
+	font-size: 3rem;
+
+	font-weight: normal;
+	@include mixins.linkStyle;
 }
 
 .is-visible {
@@ -186,46 +188,46 @@ p {
 	text-transform: uppercase;
 	text-align: center;
 	z-index: 7;
+}
 
-	&__shadow {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		padding: 2em;
-		background-color: $blue-dark-transparent;
-	}
+.hero__shadow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 2em;
+	background-color: $blue-dark-transparent;
+}
 
-	&__title {
-		background: $white-glass-gradient;
-		background-size: 200%;
-		background-clip: text;
-		color: $white-transparent;
-		// text-shadow: 3px 3px 10px $blue-dark-transparent;
-		filter: drop-shadow(0 0 0 $white);
-		font-size: 14rem;
-		font-family: 'Raleway', sans-serif;
-		animation: gradientAnimation 12s ease infinite;
-	}
+.hero__title {
+	background: $white-glass-gradient;
+	background-size: 200%;
+	background-clip: text;
+	color: $white-transparent;
+	// text-shadow: 3px 3px 10px $blue-dark-transparent;
+	filter: drop-shadow(0 0 0 $white);
+	font-size: 14rem;
+	font-family: 'Raleway', sans-serif;
+	animation: gradientAnimation 12s ease infinite;
+}
 
-	&__subtitle {
-		font-size: 2rem;
-		letter-spacing: 2em;
-		color: $white;
-		text-shadow: 2px 2px 10px $blue-dark-transparent;
-	}
+.hero__subtitle {
+	font-size: 2rem;
+	letter-spacing: 2em;
+	color: $white;
+	text-shadow: 2px 2px 10px $blue-dark-transparent;
+}
 
-	&__arrow {
-		position: absolute;
-		bottom: 20px;
-		left: 50%;
-		transform: translateX(-50%);
-		padding: 10px;
-		font-size: 4rem;
-		color: $white;
-	}
+.hero__arrow {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px;
+	font-size: 4rem;
+	color: $white;
 }
 
 // ---------- ABOUT ----------
@@ -487,6 +489,11 @@ p {
 	padding-bottom: 2em;
 }
 
+.machines__text span {
+	font-weight: bold;
+	color: $blue-dark;
+}
+
 .machines__text:nth-child(2) {
 	padding-top: 2em;
 	margin-bottom: 2em;
@@ -506,7 +513,7 @@ p {
 // ---------- OUR WORK ---------
 
 .ourwork {
-	background-color: $white;
+	background-color: $off-white;
 }
 
 // ---------- CONTACT ---------

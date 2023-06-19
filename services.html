@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/hamburger.css" />
+		<link rel="stylesheet" href="./css/services-styles.css" />
+
+		<title>Bliźniak Szkło</title>
+
+		<script src="https://kit.fontawesome.com/5b996fd4be.js" crossorigin="anonymous"></script>
+		<script src="./js/services.js" defer></script>
+		<!-- <script src="./js/main.js" defer></script> -->
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="nav-wrapper">
+				<div class="navbar">
+					<a href="index.html" class="navbar__logo">
+						<img src="./img/logo.jpg" alt="Bliźniak-Szkło" class="navbar__logo-img" />
+					</a>
+
+					<nav class="nav">
+						<ul id="primary-navigation" class="nav__menu nav__menu-desktop">
+							<li><a href="index.html#about" class="nav__link">O nas</a></li>
+							<li><a href="index.html#offer" class="nav__link">Oferta</a></li>
+							<li><a href="index.html#machines" class="nav__link">Park maszyn</a></li>
+							<li><a href="index.html#ourwork" class="nav__link">Realizacje</a></li>
+							<li><a href="index.html#contact" class="nav__link">Kontakt</a></li>
+						</ul>
+					</nav>
+
+					<nav id="services-nav__mobile" class="nav__mobile">
+						<ul id="primary-navigation" class="nav__menu nav__menu-mobile">
+							<li><a href="index.html#about" class="nav__link-mobile">O nas</a></li>
+							<li><a href="index.html#offer" class="nav__link-mobile">Oferta</a></li>
+							<li><a href="index.html#machines" class="nav__link-mobile">Park maszyn</a></li>
+							<li><a href="index.html#ourwork" class="nav__link-mobile">Realizacje</a></li>
+							<li><a href="index.html#contact" class="nav__link-mobile">Kontakt</a></li>
+						</ul>
+					</nav>
+
+					<button
+						id="services-hamburger"
+						class="hamburger hamburger--emphatic"
+						type="button"
+						aria-controls="primary-navigation"
+					>
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="hero__shadow"></div>
+			</section>
+
+			<section class="services section">
+				<div class="wrapper">
+					<h2 class="section-title">Nasze usługi</h2>
+
+					<div class="services__container">
+						<div class="about__info">
+							<p>
+								Jedną z głównych usług, w której specjalizuje się nasza firma jest precyzyjna
+								obróbka szkła na CNC. Daje ona możliwość wykonywania skomplikowanych procesów oraz
+								tworzenia nieregularnych kształtów, tradycyjne metody.
+							</p>
+							<p>
+								Dzięki doświadczeniu, stosowaniu innowacyjnych technologii oraz pracy na
+								nowoczesnych maszynach oferujemy usługi szklarskie na najwyższym poziomie.
+							</p>
+						</div>
+						<div class="services__video">
+							<video src="./video/services.mp4" autoplay muted loop></video>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer__box">
+					<div class="footer__map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2330.1888000478284!2d18.6280893!3d54.2652375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd71000fdbfa2b%3A0xfeaa3572688bab7!2sRaciborskiego%207%2C%2083-000%20Pruszcz%20Gda%C5%84ski!5e0!3m2!1sen!2spl!4v1685389573727!5m2!1sen!2spl"
+							width="300"
+							height="250"
+							style="border: 0"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+						></iframe>
+					</div>
+					<div class="footer__adress">
+						<p><i class="fa-solid fa-location-dot"></i>ul. Raciborskiego 7</p>
+						<p>83-000 Pruszcz Gdański</p>
+					</div>
+					<div class="footer__contacts">
+						<p><i class="fa-solid fa-phone"></i>+48 58 773 23 13</p>
+						<p>+48 501 741 819</p>
+						<p>
+							<i class="fa-solid fa-envelope"></i
+							><a href="mailto:marcin@blizniak.com" class="footer__link">marcin@blizniak.com</a>
+						</p>
+					</div>
+					<div class="socials">
+						<p>
+							<i class="fa-brands fa-facebook-f"></i
+							><a
+								href="http://https://www.facebook.com/profile.php?id=100068883725891"
+								target="_blank"
+								class="footer__link"
+								>Facebook</a
+							>
+						</p>
+					</div>
+					<nav class="footer__nav">
+						<ul id="footer-navigation" class="footer__nav">
+							<li><a href="index.html" class="footer__link">Home</a></li>
+							<li><a href="index.html#about" class="footer__link">O nas</a></li>
+							<li><a href="index.html#offer" class="footer__link">Oferta</a></li>
+							<li><a href="index.html#machines" class="footer__link">Park maszyn</a></li>
+							<li><a href="index.html#ourwork" class="footer__link">Realizacje</a></li>
+							<li><a href="index.html#contact" class="footer__link">Kontakt</a></li>
+						</ul>
+					</nav>
+					<div class="footer__logo">
+						<img src="./img/logo.jpg" alt="Bliźniak-Szkło" class="footer__logo-img" />
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom-txt">
+				&copy; <span class="footer__year"></span> | Bliźniak-Szkło
+			</div>
+		</footer>
+
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+	</body>
+</html>
