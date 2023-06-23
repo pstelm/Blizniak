@@ -128,7 +128,7 @@ p {
   font-size: 4rem;
   line-height: 1;
   background-color: hsla(234, 27%, 24%, 0.65);
-  border-radius: 5px;
+  border-radius: 2px;
   z-index: 5;
 }
 
@@ -172,7 +172,7 @@ p {
 .navbar__logo {
   height: 100%;
   z-index: 5;
-  border-radius: 3px;
+  border-radius: 2px;
   overflow: hidden;
 }
 
@@ -886,6 +886,10 @@ p {
   .offer__box h3 {
     font-size: 2rem;
   }
+  .machines__img {
+    display: block;
+    height: 180px;
+  }
   .ourwork__link {
     margin-top: 0.5em;
   }
@@ -963,7 +967,6 @@ p {
     margin-left: 0.8em;
   }
   .machines__img {
-    display: block;
     height: 200px;
   }
   .ourwork__box {

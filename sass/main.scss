@@ -70,7 +70,8 @@ p {
 	font-size: 4rem;
 	line-height: 1;
 	background-color: $blue-dark-transparent;
-	border-radius: 5px;
+	// border-radius: 5px;
+	border-radius: 2px;
 	z-index: 5;
 }
 
@@ -106,7 +107,7 @@ p {
 .navbar__logo {
 	height: 100%;
 	z-index: 5;
-	border-radius: 3px;
+	border-radius: 2px;
 	overflow: hidden;
 }
 
@@ -735,6 +736,11 @@ p {
 		font-size: 2rem;
 	}
 
+	.machines__img {
+		display: block;
+		height: 180px;
+	}
+
 	.ourwork__link {
 		margin-top: 0.5em;
 	}
@@ -834,7 +840,6 @@ p {
 	}
 
 	.machines__img {
-		display: block;
 		height: 200px;
 	}
 
