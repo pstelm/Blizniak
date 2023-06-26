@@ -51,6 +51,10 @@ contactForm.addEventListener('submit', (event) => {
 	form.reset();
 });
 
+// window.addEventListener('hashchange', (e) => {
+// 	history.replaceState({}, '', location.hash.slice(1));
+// });
+
 setCurrentYear();
 menuBtn.addEventListener('click', toogleMenu);
 navLinkHandler();
