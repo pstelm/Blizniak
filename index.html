@@ -22,6 +22,7 @@
 	</head>
 
 	<body>
+		<p class="msg-status"></p>
 		<header class="header">
 			<div class="nav-wrapper">
 				<div class="navbar">
@@ -380,8 +381,9 @@
 				<div class="wrapper">
 					<h2 class="section-title">Kontakt</h2>
 					<div class="contact__box">
-						<form class="contact__form" name="contactFrom">
+						<form class="contact__form" name="contactFrom" method="post" action="mail.php">
 							<input
+								id="name"
 								class="contact__form-input"
 								type="text"
 								name="name"
@@ -389,6 +391,7 @@
 								required
 							/>
 							<input
+								id="company"
 								class="contact__form-input"
 								type="text"
 								name="company"
@@ -396,6 +399,7 @@
 							/>
 
 							<input
+								id="email"
 								class="contact__form-input"
 								type="email"
 								name="email"
@@ -403,6 +407,7 @@
 								required
 							/>
 							<input
+								id="phone"
 								class="contact__form-input"
 								type="tel"
 								name="phone"
@@ -410,6 +415,7 @@
 							/>
 
 							<textarea
+								id="message"
 								class="contact__form-input contact__form-textarea"
 								name="message"
 								id="message"
@@ -419,6 +425,7 @@
 							></textarea>
 							<button id="form-btn" class="contact__form-btn" type="submit">Wyślij</button>
 						</form>
+
 						<!-- <div class="contact__img">
 							<img src="./img/yacht/y4.jpg" alt="Szklane drzwi w łazience jachtu ACE" />
 						</div> -->
@@ -483,7 +490,5 @@
 				&copy; <span class="footer__year"></span> | Bliźniak-Szkło
 			</div>
 		</footer>
-
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</body>
 </html>
